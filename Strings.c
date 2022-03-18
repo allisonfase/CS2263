@@ -80,7 +80,7 @@ String getfc(FILE* pFIn, String terminators, int n)
         if(s != NULL)
        {
             // terminate the string
-	 s[0] = ((char)NULL);
+	 s[n+1] = ((char)NULL);
         }  
         return s;
     }
