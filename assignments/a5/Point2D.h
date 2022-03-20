@@ -31,6 +31,7 @@ Point2D* mallocPoint2D();
  */
 void freePoint2D(Point2D* pPtThis);
 
+// constructor
 Point2D* createPoint2D(double x, double y);
 
 void setPoint2D(Point2D* pPtThis, double x, double y);

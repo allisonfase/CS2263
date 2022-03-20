@@ -28,10 +28,11 @@ void freePoint2D(Point2D* pPtThis){
   free(pPtThis);
 }
 
+// constructor
 Point2D* createPoint2D(double x, double y){
   Point2D* pPtThis = mallocPoint2D();
   if(pPtThis != (Point2D*)NULL ){
-	setPoint2D(pPtThis,x,y);
+	  setPoint2D(pPtThis,x,y);
   }
   return pPtThis;
 }
