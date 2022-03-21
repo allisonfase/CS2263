@@ -9,6 +9,7 @@
 #define POINT2D_H
 
 #include <stdio.h>
+#include <math.h>
 
 typedef struct point2d
 {

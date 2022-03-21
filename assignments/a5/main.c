@@ -43,7 +43,7 @@ int main(int argc, char** argv){
 
         // *-> construct a new bus route
         routes[currentArrayIndex] = mallocBusRoute(numStops); // needs numStops
-
+        PointList* pointList = (PointList*)mallocPointList(numStops);
         char* stopXCoord = NULL;
         char* stopYCoord = NULL;
         char* stopName = NULL;

@@ -76,7 +76,7 @@ char* getfc(FILE* pFIn, char* terminators, int n){
         s = mallocString(n);    
         if(s != (char*)NULL){
             // terminate the string
-            s[n+1] = (char)NULL;
+            s[n+1] = '\0';
         }    
         return s;
     }
@@ -87,7 +87,7 @@ char* getfc(FILE* pFIn, char* terminators, int n){
 
 int charInString(char* t, char c){
     int i = 0;
-    while(t[i] != (char)NULL){
+    while(t[i] != '\0'){
         if(t[i] == c) return 1;
         i++;
     }
