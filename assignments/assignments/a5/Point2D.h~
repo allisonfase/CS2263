@@ -8,12 +8,10 @@
 #ifndef POINT2D_H
 #define POINT2D_H
 
-#include <stdio.h>
-
 typedef struct point2d
 {
-  double x;
-  double y;
+	double x;
+	double y;
 
 } Point2D;
 
@@ -33,7 +31,6 @@ Point2D* mallocPoint2D();
  */
 void freePoint2D(Point2D* pPtThis);
 
-// constructor
 Point2D* createPoint2D(double x, double y);
 
 void setPoint2D(Point2D* pPtThis, double x, double y);
