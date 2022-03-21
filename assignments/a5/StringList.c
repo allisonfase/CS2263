@@ -48,7 +48,7 @@ StringList* duplicateStringList(StringList* pSLThis){
     if(pSLThat == (StringList*)NULL) return pSLThat;
     for(int i = 0; i<pSLThis->length; i++){
         pSLThat->Slist[i] = duplicateString(pSLThis->Slist[i]);
-        if(pSLThat->Slist[i] == (String)NULL {
+        if(pSLThat->Slist[i] == (String)NULL) {
             /**
              * EEEK - We failed and now need to clean up our mess!
              * 1. Free all of hte strings that we may have allocated until this loop iteration
