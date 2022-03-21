@@ -1,38 +1,20 @@
+#include "Point2D.h"
+#include <stdlib.h>
+
 #ifndef POINTLIST_H
 #define POINTLIST_H
 
-#include <stdio.h>
-#include "Point2D.h"
-
 typedef struct pointlist{
-    // a dynamic array which acts like a list of cartesian points 
-    PointList pointList[];
-
-    // keeps track of how many points are in the array
-    int length;
-
-    // keeps track of the maximum number of elements in the array
-    int maxLength;
-
+        int length;
+        Point2D* pointList;
 } PointList;
 
-//constructor
-PointList* mallocPointList();
+PointList* mallocPointList(int iNElements);
 
-// calls createPoint2D from Point2D
-// calls addPoint2DtoList
-// returns updated list
-PointList* addCoordstoList(PointList* pPLThis, double xcoord, double ycoord); 
+void freePointList(PointList* pList);
 
-// returns Point2D at index n from the list
-Point2D* getPointfromList(PointList* pPLThis, int n);
+int setElementPointList(PointList* pList, Point2D point, int index);
 
-// returns updated list after adding a new Point2D
-PointList* addPoint2DtoList(PointList* pPLThis, Point2D* pPt2D);
-
-// frees each indexed point in list
-// frees PointList struct
-// returns nothing
-void freePointList(PointList* pPLThis);
+Point2D* getElementPointList(PointList* pList, int index);
 
 #endif
